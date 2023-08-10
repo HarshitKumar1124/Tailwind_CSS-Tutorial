@@ -4,12 +4,12 @@ import {AiOutlineMenu,AiOutlineClose} from 'react-icons/ai'
 const Header = () => {
   const [Toggle, setToggle] = useState(false)
   return (
-    <div className='bg-[#2699fb] p-4'>
+    <div className='bg-[#2699fb] p-4 border border-[yellow]'>
         <div className='max-w-[1240px] border border-black mx-auto flex justify-between items-center '>
             <div className='border border-[green] text-3xl font-bold'>Harry Knocker</div>
             
             {
-            Toggle==false 
+            Toggle===false 
             ?<AiOutlineMenu className='text-white text-2xl block md:hidden'  onClick={()=> setToggle(!Toggle)}/> 
             :<AiOutlineClose className='text-white text-2xl block' onClick={()=> setToggle(!Toggle)}/>
             }
